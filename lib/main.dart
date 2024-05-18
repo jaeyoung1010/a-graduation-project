@@ -134,7 +134,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('회원가입')),
+      appBar: AppBar(
+          automaticallyImplyLeading: false,
+          title: Text('회원가입')),
       body: Column(
         children: [
           TextField(
@@ -184,6 +186,7 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('로그인'),
       ),
       body: Column(

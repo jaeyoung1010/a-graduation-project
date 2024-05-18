@@ -12,6 +12,9 @@ import 'package:a_graduation_project_2/screen/meeting_page.dart';
 import 'package:a_graduation_project_2/screen/login.dart';
 import 'package:a_graduation_project_2/screen/record.dart';
 
+import 'addcontact.dart';
+import 'contactlist.dart';
+
 
 class HomePage extends StatefulWidget {
   @override
@@ -90,7 +93,7 @@ class _HomePageState extends State<HomePage> {
               onTap: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => MemberEditScreen()),
+                  MaterialPageRoute(builder: (context) => ContactsListScreen()),
                 );
               },
               child: Icon(Icons.settings),

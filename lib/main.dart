@@ -1,3 +1,4 @@
+import 'package:a_graduation_project_2/screen/addcontact.dart';
 import 'package:a_graduation_project_2/screen/join.dart';
 import 'package:a_graduation_project_2/screen/mainpage.dart';
 import 'package:a_graduation_project_2/screen/memberedit.dart';
@@ -146,7 +147,13 @@ class _SignUpScreenState extends State<SignUpScreen> {
             obscureText: true,
           ),
           ElevatedButton(
-            onPressed: _registerUser,
+            onPressed: () {
+              _registerUser();
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AddContactScreen()),
+              );
+            },
             child: Text('회원가입'),
           ),
           TextButton(

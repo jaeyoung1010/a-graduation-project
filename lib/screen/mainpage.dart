@@ -85,6 +85,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -96,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => ContactsListScreen()),
                 );
               },
-              child: Icon(Icons.settings),
+              child: Icon(Icons.contact_page_rounded),
             ),
           ],
         ),

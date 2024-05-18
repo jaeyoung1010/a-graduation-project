@@ -42,6 +42,7 @@ class _AddContactScreenState extends State<AddContactScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         title: Text('비상연락처 추가'),
       ),
       body: Form(
@@ -78,7 +79,7 @@ class _AddContactScreenState extends State<AddContactScreen> {
                 _saveContact();
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => LoginScreen()),
+                  MaterialPageRoute(builder: (context) => SignUpScreen()),
                 );
               },
             )

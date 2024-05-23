@@ -11,7 +11,7 @@ import 'package:a_graduation_project_2/screen/information_on_the_elderly.dart';
 import 'package:a_graduation_project_2/screen/meeting_page.dart';
 import 'package:a_graduation_project_2/screen/login.dart';
 import 'package:a_graduation_project_2/screen/record.dart';
-
+import 'package:a_graduation_project_2/screen/meeting_page.dart';
 import 'addcontact.dart';
 import 'contactlist.dart';
 
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (context) => ContactsListScreen()),
                 );
               },
-              child: Icon(Icons.contact_page_rounded),
+              child: Icon(Icons.contact_page),
             ),
           ],
         ),

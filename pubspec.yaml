@@ -45,6 +45,7 @@ dependencies:
   flutter_sound: ^9.2.13
   microphone: ^0.1.0
   path_provider: ^2.1.3
+  firebase_storage: ^11.6.9
 
 dev_dependencies:
   flutter_test:

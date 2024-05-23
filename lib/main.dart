@@ -134,18 +134,22 @@ class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-          automaticallyImplyLeading: false,
-          title: Text('회원가입')),
+      appBar: AppBar(automaticallyImplyLeading: false, title: Text('회원가입')),
       body: Column(
         children: [
           TextField(
             controller: _emailController,
-            decoration: InputDecoration(labelText: '이메일'),
+            decoration: InputDecoration(
+              labelText: '이메일',
+              hintText: '생년월일을 입력하세요.@silver.com',
+            ),
           ),
           TextField(
             controller: _passwordController,
-            decoration: InputDecoration(labelText: '비밀번호'),
+            decoration: InputDecoration(
+              labelText: '비밀번호',
+              hintText: '비밀번호를 6자리 이상 입력하세요',
+            ),
             obscureText: true,
           ),
           ElevatedButton(
@@ -195,12 +199,14 @@ class _LoginScreenState extends State<LoginScreen> {
             controller: _emailController,
             decoration: InputDecoration(
               labelText: '이메일',
+              hintText: '생년월일을 입력하세요.@silver.com', // 힌트 추가
             ),
           ),
           TextField(
             controller: _passwordController,
             decoration: InputDecoration(
               labelText: '비밀번호',
+              hintText: '비밀번호를 입력하세요', // 힌트 추가
             ),
             obscureText: true,
           ),
@@ -225,7 +231,7 @@ class _LoginScreenState extends State<LoginScreen> {
     try {
       // 로그인 로직 구현. 예를 들어 Firebase를 사용하는 경우 아래와 같습니다.
       final UserCredential userCredential =
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
@@ -247,10 +253,10 @@ class _LoginScreenState extends State<LoginScreen> {
       // 로그인 실패 처리. 오류 메시지를 사용자에게 보여줍니다.
       // 로그인 실패 Snackbar 메시지
       ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
-            content: Text("로그인 실패"),
-            backgroundColor: Colors.red,
-          ),
+        SnackBar(
+          content: Text("로그인 실패"),
+          backgroundColor: Colors.red,
+        ),
       );
     }
   }
